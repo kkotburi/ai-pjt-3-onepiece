@@ -1,0 +1,46 @@
+{
+  "first_save": {
+    "id": 1,
+    "overlaps": []
+  },
+  "second_save": {
+    "id": 2,
+    "overlaps": [
+      1
+    ]
+  },
+  "updated_list": [
+    {
+      "episode": 2,
+      "start": "2026-11-21T18:00:00+09:00",
+      "end": "2026-11-21T18:25:00+09:00",
+      "id": 1,
+      "sid": "a155d669-bfbf-4846-a81b-183fab069c46",
+      "created": "2026-11-20 06:06:53"
+    },
+    {
+      "episode": 1,
+      "start": "2026-11-21T18:00:00+09:00",
+      "end": "2026-11-21T18:25:00+09:00",
+      "id": 2,
+      "sid": "a155d669-bfbf-4846-a81b-183fab069c46",
+      "created": "2026-11-20 06:06:53"
+    }
+  ],
+  "updated_detail": {
+    "episode": 2,
+    "start": "2026-11-21T18:00:00+09:00",
+    "end": "2026-11-21T18:25:00+09:00",
+    "id": 1,
+    "sid": "a155d669-bfbf-4846-a81b-183fab069c46",
+    "created": "2026-11-20 06:06:53"
+  },
+  "delete_plan": {
+    "deleted": 1
+  },
+  "detail_after_delete_status": 404,
+  "delete_logs": {
+    "deleted": 67
+  },
+  "logs_after_delete": []
+}

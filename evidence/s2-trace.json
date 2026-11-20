@@ -1,0 +1,243 @@
+{
+  "request": "토요일 18:00~18:10이나 일요일 19:00~19:30에 보고 싶어",
+  "response": "나미의 첫 등장: 1화. 시청 시간은 25분입니다. 11/21 18:00 구간은 10분으로 부족합니다. 11/22 19:00~19:25에 볼 수 있습니다.",
+  "slot": {
+    "episode": 1,
+    "start": "2026-11-22T19:00:00+09:00",
+    "end": "2026-11-22T19:25:00+09:00"
+  },
+  "elapsed_ms": 2.07,
+  "trace": [
+    {
+      "kind": "stage_start",
+      "stage": "analyze",
+      "run_id": "d6d9ffaf-7323-42e5-b457-1a8710c1cce3"
+    },
+    {
+      "kind": "decision",
+      "intent": "schedule",
+      "reason": "테스트에서 지정한 의도",
+      "run_id": "d6d9ffaf-7323-42e5-b457-1a8710c1cce3"
+    },
+    {
+      "kind": "stage_end",
+      "stage": "analyze",
+      "run_id": "d6d9ffaf-7323-42e5-b457-1a8710c1cce3"
+    },
+    {
+      "kind": "stage_start",
+      "stage": "lookup",
+      "run_id": "d6d9ffaf-7323-42e5-b457-1a8710c1cce3"
+    },
+    {
+      "kind": "plan",
+      "tools": [
+        "characters",
+        "debut",
+        "runtime"
+      ],
+      "run_id": "d6d9ffaf-7323-42e5-b457-1a8710c1cce3"
+    },
+    {
+      "kind": "tool_start",
+      "tool": "characters",
+      "input": "나미",
+      "run_id": "d6d9ffaf-7323-42e5-b457-1a8710c1cce3"
+    },
+    {
+      "kind": "tool_end",
+      "tool": "characters",
+      "result": {
+        "ok": true,
+        "data": [
+          {
+            "id": "fixture-nami",
+            "name": "Nami",
+            "korean_name": "나미"
+          }
+        ]
+      },
+      "ms": 0,
+      "run_id": "d6d9ffaf-7323-42e5-b457-1a8710c1cce3"
+    },
+    {
+      "kind": "tool_start",
+      "tool": "debut",
+      "input": {
+        "id": "fixture-nami",
+        "name": "Nami",
+        "korean_name": "나미"
+      },
+      "run_id": "d6d9ffaf-7323-42e5-b457-1a8710c1cce3"
+    },
+    {
+      "kind": "tool_end",
+      "tool": "debut",
+      "result": {
+        "ok": true,
+        "data": {
+          "episode": 1,
+          "titles": [
+            "Fixture title"
+          ],
+          "source": "https://onepiece.fandom.com/wiki/Episode_1"
+        }
+      },
+      "ms": 0,
+      "run_id": "d6d9ffaf-7323-42e5-b457-1a8710c1cce3"
+    },
+    {
+      "kind": "tool_start",
+      "tool": "runtime",
+      "input": {
+        "episode": 1,
+        "titles": [
+          "Fixture title"
+        ],
+        "source": "https://onepiece.fandom.com/wiki/Episode_1"
+      },
+      "run_id": "d6d9ffaf-7323-42e5-b457-1a8710c1cce3"
+    },
+    {
+      "kind": "tool_end",
+      "tool": "runtime",
+      "result": {
+        "ok": true,
+        "data": {
+          "minutes": 25,
+          "source": "https://www.tvmaze.com/episodes/256125"
+        }
+      },
+      "ms": 0,
+      "run_id": "d6d9ffaf-7323-42e5-b457-1a8710c1cce3"
+    },
+    {
+      "kind": "stage_end",
+      "stage": "lookup",
+      "run_id": "d6d9ffaf-7323-42e5-b457-1a8710c1cce3"
+    },
+    {
+      "kind": "stage_start",
+      "stage": "decide",
+      "run_id": "d6d9ffaf-7323-42e5-b457-1a8710c1cce3"
+    },
+    {
+      "kind": "replan",
+      "attempt": 1,
+      "reason": "다음 허용 구간 탐색",
+      "run_id": "d6d9ffaf-7323-42e5-b457-1a8710c1cce3"
+    },
+    {
+      "kind": "stage_end",
+      "stage": "decide",
+      "run_id": "d6d9ffaf-7323-42e5-b457-1a8710c1cce3"
+    }
+  ],
+  "saved_events": [
+    {
+      "id": 15,
+      "sid": "a155d669-bfbf-4846-a81b-183fab069c46",
+      "kind": "stage_start",
+      "payload": "{\"stage\": \"analyze\", \"run_id\": \"d6d9ffaf-7323-42e5-b457-1a8710c1cce3\"}",
+      "created": "2026-11-20 06:06:53"
+    },
+    {
+      "id": 16,
+      "sid": "a155d669-bfbf-4846-a81b-183fab069c46",
+      "kind": "decision",
+      "payload": "{\"intent\": \"schedule\", \"reason\": \"테스트에서 지정한 의도\", \"run_id\": \"d6d9ffaf-7323-42e5-b457-1a8710c1cce3\"}",
+      "created": "2026-11-20 06:06:53"
+    },
+    {
+      "id": 17,
+      "sid": "a155d669-bfbf-4846-a81b-183fab069c46",
+      "kind": "stage_end",
+      "payload": "{\"stage\": \"analyze\", \"run_id\": \"d6d9ffaf-7323-42e5-b457-1a8710c1cce3\"}",
+      "created": "2026-11-20 06:06:53"
+    },
+    {
+      "id": 18,
+      "sid": "a155d669-bfbf-4846-a81b-183fab069c46",
+      "kind": "stage_start",
+      "payload": "{\"stage\": \"lookup\", \"run_id\": \"d6d9ffaf-7323-42e5-b457-1a8710c1cce3\"}",
+      "created": "2026-11-20 06:06:53"
+    },
+    {
+      "id": 19,
+      "sid": "a155d669-bfbf-4846-a81b-183fab069c46",
+      "kind": "plan",
+      "payload": "{\"tools\": [\"characters\", \"debut\", \"runtime\"], \"run_id\": \"d6d9ffaf-7323-42e5-b457-1a8710c1cce3\"}",
+      "created": "2026-11-20 06:06:53"
+    },
+    {
+      "id": 20,
+      "sid": "a155d669-bfbf-4846-a81b-183fab069c46",
+      "kind": "tool_start",
+      "payload": "{\"tool\": \"characters\", \"input\": \"나미\", \"run_id\": \"d6d9ffaf-7323-42e5-b457-1a8710c1cce3\"}",
+      "created": "2026-11-20 06:06:53"
+    },
+    {
+      "id": 21,
+      "sid": "a155d669-bfbf-4846-a81b-183fab069c46",
+      "kind": "tool_end",
+      "payload": "{\"tool\": \"characters\", \"result\": {\"ok\": true, \"data\": [{\"id\": \"fixture-nami\", \"name\": \"Nami\", \"korean_name\": \"나미\"}]}, \"ms\": 0, \"run_id\": \"d6d9ffaf-7323-42e5-b457-1a8710c1cce3\"}",
+      "created": "2026-11-20 06:06:53"
+    },
+    {
+      "id": 22,
+      "sid": "a155d669-bfbf-4846-a81b-183fab069c46",
+      "kind": "tool_start",
+      "payload": "{\"tool\": \"debut\", \"input\": {\"id\": \"fixture-nami\", \"name\": \"Nami\", \"korean_name\": \"나미\"}, \"run_id\": \"d6d9ffaf-7323-42e5-b457-1a8710c1cce3\"}",
+      "created": "2026-11-20 06:06:53"
+    },
+    {
+      "id": 23,
+      "sid": "a155d669-bfbf-4846-a81b-183fab069c46",
+      "kind": "tool_end",
+      "payload": "{\"tool\": \"debut\", \"result\": {\"ok\": true, \"data\": {\"episode\": 1, \"titles\": [\"Fixture title\"], \"source\": \"https://onepiece.fandom.com/wiki/Episode_1\"}}, \"ms\": 0, \"run_id\": \"d6d9ffaf-7323-42e5-b457-1a8710c1cce3\"}",
+      "created": "2026-11-20 06:06:53"
+    },
+    {
+      "id": 24,
+      "sid": "a155d669-bfbf-4846-a81b-183fab069c46",
+      "kind": "tool_start",
+      "payload": "{\"tool\": \"runtime\", \"input\": {\"episode\": 1, \"titles\": [\"Fixture title\"], \"source\": \"https://onepiece.fandom.com/wiki/Episode_1\"}, \"run_id\": \"d6d9ffaf-7323-42e5-b457-1a8710c1cce3\"}",
+      "created": "2026-11-20 06:06:53"
+    },
+    {
+      "id": 25,
+      "sid": "a155d669-bfbf-4846-a81b-183fab069c46",
+      "kind": "tool_end",
+      "payload": "{\"tool\": \"runtime\", \"result\": {\"ok\": true, \"data\": {\"minutes\": 25, \"source\": \"https://www.tvmaze.com/episodes/256125\"}}, \"ms\": 0, \"run_id\": \"d6d9ffaf-7323-42e5-b457-1a8710c1cce3\"}",
+      "created": "2026-11-20 06:06:53"
+    },
+    {
+      "id": 26,
+      "sid": "a155d669-bfbf-4846-a81b-183fab069c46",
+      "kind": "stage_end",
+      "payload": "{\"stage\": \"lookup\", \"run_id\": \"d6d9ffaf-7323-42e5-b457-1a8710c1cce3\"}",
+      "created": "2026-11-20 06:06:53"
+    },
+    {
+      "id": 27,
+      "sid": "a155d669-bfbf-4846-a81b-183fab069c46",
+      "kind": "stage_start",
+      "payload": "{\"stage\": \"decide\", \"run_id\": \"d6d9ffaf-7323-42e5-b457-1a8710c1cce3\"}",
+      "created": "2026-11-20 06:06:53"
+    },
+    {
+      "id": 28,
+      "sid": "a155d669-bfbf-4846-a81b-183fab069c46",
+      "kind": "replan",
+      "payload": "{\"attempt\": 1, \"reason\": \"다음 허용 구간 탐색\", \"run_id\": \"d6d9ffaf-7323-42e5-b457-1a8710c1cce3\"}",
+      "created": "2026-11-20 06:06:53"
+    },
+    {
+      "id": 29,
+      "sid": "a155d669-bfbf-4846-a81b-183fab069c46",
+      "kind": "stage_end",
+      "payload": "{\"stage\": \"decide\", \"run_id\": \"d6d9ffaf-7323-42e5-b457-1a8710c1cce3\"}",
+      "created": "2026-11-20 06:06:53"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/fastapi/testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+  from starlette.testclient import TestClient as TestClient  # noqa
+test_all_korean_names_resolve_to_original_id (__main__.ServiceChecks.test_all_korean_names_resolve_to_original_id) ... ok
+test_ambiguous_date (__main__.ServiceChecks.test_ambiguous_date) ... ok
+test_deadline_uses_runtime_without_creating_saveable_slot (__main__.ServiceChecks.test_deadline_uses_runtime_without_creating_saveable_slot) ... ok
+test_followup_reuses_results_and_stops_at_limit (__main__.ServiceChecks.test_followup_reuses_results_and_stops_at_limit) ... ok
+test_invalid_tool_inputs_do_not_contact_upstream (__main__.ServiceChecks.test_invalid_tool_inputs_do_not_contact_upstream) ... ok
+test_korean_catalog_fetches_chosen_id (__main__.ServiceChecks.test_korean_catalog_fetches_chosen_id) ... ok
+test_numbered_episode_source (__main__.ServiceChecks.test_numbered_episode_source) ... ok
+test_partial_and_no_matches (__main__.ServiceChecks.test_partial_and_no_matches) ... ok
+test_plans_replan_and_logs (__main__.ServiceChecks.test_plans_replan_and_logs) ... ok
+test_search_through_runtime (__main__.ServiceChecks.test_search_through_runtime) ... ok
+test_wrong_airdate_does_not_select_next_episode (__main__.ServiceChecks.test_wrong_airdate_does_not_select_next_episode) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.592s
+
+OK

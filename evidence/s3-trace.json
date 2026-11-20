@@ -1,0 +1,265 @@
+{
+  "request": "21~25일 매일 18:00~18:10 중에 보고 싶어",
+  "response": "나미의 첫 등장: 1화. 시청 시간은 25분입니다. 11/21 18:00 구간은 10분으로 부족합니다. 11/22 18:00 구간은 10분으로 부족합니다. 11/23 18:00 구간은 10분으로 부족합니다. 11/24 18:00 구간은 10분으로 부족합니다. 재계획 상한(3회)에 도달했습니다. 다른 시청 가능 시간을 알려주세요.",
+  "slot": null,
+  "elapsed_ms": 2.29,
+  "trace": [
+    {
+      "kind": "stage_start",
+      "stage": "analyze",
+      "run_id": "d5a3761e-ecba-4a8f-a915-a37ca2ec7f5b"
+    },
+    {
+      "kind": "decision",
+      "intent": "schedule",
+      "reason": "테스트에서 지정한 의도",
+      "run_id": "d5a3761e-ecba-4a8f-a915-a37ca2ec7f5b"
+    },
+    {
+      "kind": "stage_end",
+      "stage": "analyze",
+      "run_id": "d5a3761e-ecba-4a8f-a915-a37ca2ec7f5b"
+    },
+    {
+      "kind": "stage_start",
+      "stage": "lookup",
+      "run_id": "d5a3761e-ecba-4a8f-a915-a37ca2ec7f5b"
+    },
+    {
+      "kind": "plan",
+      "tools": [
+        "characters",
+        "debut",
+        "runtime"
+      ],
+      "run_id": "d5a3761e-ecba-4a8f-a915-a37ca2ec7f5b"
+    },
+    {
+      "kind": "tool_start",
+      "tool": "characters",
+      "input": "나미",
+      "run_id": "d5a3761e-ecba-4a8f-a915-a37ca2ec7f5b"
+    },
+    {
+      "kind": "tool_end",
+      "tool": "characters",
+      "result": {
+        "ok": true,
+        "data": [
+          {
+            "id": "fixture-nami",
+            "name": "Nami",
+            "korean_name": "나미"
+          }
+        ]
+      },
+      "ms": 0,
+      "run_id": "d5a3761e-ecba-4a8f-a915-a37ca2ec7f5b"
+    },
+    {
+      "kind": "tool_start",
+      "tool": "debut",
+      "input": {
+        "id": "fixture-nami",
+        "name": "Nami",
+        "korean_name": "나미"
+      },
+      "run_id": "d5a3761e-ecba-4a8f-a915-a37ca2ec7f5b"
+    },
+    {
+      "kind": "tool_end",
+      "tool": "debut",
+      "result": {
+        "ok": true,
+        "data": {
+          "episode": 1,
+          "titles": [
+            "Fixture title"
+          ],
+          "source": "https://onepiece.fandom.com/wiki/Episode_1"
+        }
+      },
+      "ms": 0,
+      "run_id": "d5a3761e-ecba-4a8f-a915-a37ca2ec7f5b"
+    },
+    {
+      "kind": "tool_start",
+      "tool": "runtime",
+      "input": {
+        "episode": 1,
+        "titles": [
+          "Fixture title"
+        ],
+        "source": "https://onepiece.fandom.com/wiki/Episode_1"
+      },
+      "run_id": "d5a3761e-ecba-4a8f-a915-a37ca2ec7f5b"
+    },
+    {
+      "kind": "tool_end",
+      "tool": "runtime",
+      "result": {
+        "ok": true,
+        "data": {
+          "minutes": 25,
+          "source": "https://www.tvmaze.com/episodes/256125"
+        }
+      },
+      "ms": 0,
+      "run_id": "d5a3761e-ecba-4a8f-a915-a37ca2ec7f5b"
+    },
+    {
+      "kind": "stage_end",
+      "stage": "lookup",
+      "run_id": "d5a3761e-ecba-4a8f-a915-a37ca2ec7f5b"
+    },
+    {
+      "kind": "stage_start",
+      "stage": "decide",
+      "run_id": "d5a3761e-ecba-4a8f-a915-a37ca2ec7f5b"
+    },
+    {
+      "kind": "replan",
+      "attempt": 1,
+      "reason": "다음 허용 구간 탐색",
+      "run_id": "d5a3761e-ecba-4a8f-a915-a37ca2ec7f5b"
+    },
+    {
+      "kind": "replan",
+      "attempt": 2,
+      "reason": "다음 허용 구간 탐색",
+      "run_id": "d5a3761e-ecba-4a8f-a915-a37ca2ec7f5b"
+    },
+    {
+      "kind": "replan",
+      "attempt": 3,
+      "reason": "다음 허용 구간 탐색",
+      "run_id": "d5a3761e-ecba-4a8f-a915-a37ca2ec7f5b"
+    },
+    {
+      "kind": "stage_end",
+      "stage": "decide",
+      "run_id": "d5a3761e-ecba-4a8f-a915-a37ca2ec7f5b"
+    }
+  ],
+  "saved_events": [
+    {
+      "id": 30,
+      "sid": "a155d669-bfbf-4846-a81b-183fab069c46",
+      "kind": "stage_start",
+      "payload": "{\"stage\": \"analyze\", \"run_id\": \"d5a3761e-ecba-4a8f-a915-a37ca2ec7f5b\"}",
+      "created": "2026-11-20 06:06:53"
+    },
+    {
+      "id": 31,
+      "sid": "a155d669-bfbf-4846-a81b-183fab069c46",
+      "kind": "decision",
+      "payload": "{\"intent\": \"schedule\", \"reason\": \"테스트에서 지정한 의도\", \"run_id\": \"d5a3761e-ecba-4a8f-a915-a37ca2ec7f5b\"}",
+      "created": "2026-11-20 06:06:53"
+    },
+    {
+      "id": 32,
+      "sid": "a155d669-bfbf-4846-a81b-183fab069c46",
+      "kind": "stage_end",
+      "payload": "{\"stage\": \"analyze\", \"run_id\": \"d5a3761e-ecba-4a8f-a915-a37ca2ec7f5b\"}",
+      "created": "2026-11-20 06:06:53"
+    },
+    {
+      "id": 33,
+      "sid": "a155d669-bfbf-4846-a81b-183fab069c46",
+      "kind": "stage_start",
+      "payload": "{\"stage\": \"lookup\", \"run_id\": \"d5a3761e-ecba-4a8f-a915-a37ca2ec7f5b\"}",
+      "created": "2026-11-20 06:06:53"
+    },
+    {
+      "id": 34,
+      "sid": "a155d669-bfbf-4846-a81b-183fab069c46",
+      "kind": "plan",
+      "payload": "{\"tools\": [\"characters\", \"debut\", \"runtime\"], \"run_id\": \"d5a3761e-ecba-4a8f-a915-a37ca2ec7f5b\"}",
+      "created": "2026-11-20 06:06:53"
+    },
+    {
+      "id": 35,
+      "sid": "a155d669-bfbf-4846-a81b-183fab069c46",
+      "kind": "tool_start",
+      "payload": "{\"tool\": \"characters\", \"input\": \"나미\", \"run_id\": \"d5a3761e-ecba-4a8f-a915-a37ca2ec7f5b\"}",
+      "created": "2026-11-20 06:06:53"
+    },
+    {
+      "id": 36,
+      "sid": "a155d669-bfbf-4846-a81b-183fab069c46",
+      "kind": "tool_end",
+      "payload": "{\"tool\": \"characters\", \"result\": {\"ok\": true, \"data\": [{\"id\": \"fixture-nami\", \"name\": \"Nami\", \"korean_name\": \"나미\"}]}, \"ms\": 0, \"run_id\": \"d5a3761e-ecba-4a8f-a915-a37ca2ec7f5b\"}",
+      "created": "2026-11-20 06:06:53"
+    },
+    {
+      "id": 37,
+      "sid": "a155d669-bfbf-4846-a81b-183fab069c46",
+      "kind": "tool_start",
+      "payload": "{\"tool\": \"debut\", \"input\": {\"id\": \"fixture-nami\", \"name\": \"Nami\", \"korean_name\": \"나미\"}, \"run_id\": \"d5a3761e-ecba-4a8f-a915-a37ca2ec7f5b\"}",
+      "created": "2026-11-20 06:06:53"
+    },
+    {
+      "id": 38,
+      "sid": "a155d669-bfbf-4846-a81b-183fab069c46",
+      "kind": "tool_end",
+      "payload": "{\"tool\": \"debut\", \"result\": {\"ok\": true, \"data\": {\"episode\": 1, \"titles\": [\"Fixture title\"], \"source\": \"https://onepiece.fandom.com/wiki/Episode_1\"}}, \"ms\": 0, \"run_id\": \"d5a3761e-ecba-4a8f-a915-a37ca2ec7f5b\"}",
+      "created": "2026-11-20 06:06:53"
+    },
+    {
+      "id": 39,
+      "sid": "a155d669-bfbf-4846-a81b-183fab069c46",
+      "kind": "tool_start",
+      "payload": "{\"tool\": \"runtime\", \"input\": {\"episode\": 1, \"titles\": [\"Fixture title\"], \"source\": \"https://onepiece.fandom.com/wiki/Episode_1\"}, \"run_id\": \"d5a3761e-ecba-4a8f-a915-a37ca2ec7f5b\"}",
+      "created": "2026-11-20 06:06:53"
+    },
+    {
+      "id": 40,
+      "sid": "a155d669-bfbf-4846-a81b-183fab069c46",
+      "kind": "tool_end",
+      "payload": "{\"tool\": \"runtime\", \"result\": {\"ok\": true, \"data\": {\"minutes\": 25, \"source\": \"https://www.tvmaze.com/episodes/256125\"}}, \"ms\": 0, \"run_id\": \"d5a3761e-ecba-4a8f-a915-a37ca2ec7f5b\"}",
+      "created": "2026-11-20 06:06:53"
+    },
+    {
+      "id": 41,
+      "sid": "a155d669-bfbf-4846-a81b-183fab069c46",
+      "kind": "stage_end",
+      "payload": "{\"stage\": \"lookup\", \"run_id\": \"d5a3761e-ecba-4a8f-a915-a37ca2ec7f5b\"}",
+      "created": "2026-11-20 06:06:53"
+    },
+    {
+      "id": 42,
+      "sid": "a155d669-bfbf-4846-a81b-183fab069c46",
+      "kind": "stage_start",
+      "payload": "{\"stage\": \"decide\", \"run_id\": \"d5a3761e-ecba-4a8f-a915-a37ca2ec7f5b\"}",
+      "created": "2026-11-20 06:06:53"
+    },
+    {
+      "id": 43,
+      "sid": "a155d669-bfbf-4846-a81b-183fab069c46",
+      "kind": "replan",
+      "payload": "{\"attempt\": 1, \"reason\": \"다음 허용 구간 탐색\", \"run_id\": \"d5a3761e-ecba-4a8f-a915-a37ca2ec7f5b\"}",
+      "created": "2026-11-20 06:06:53"
+    },
+    {
+      "id": 44,
+      "sid": "a155d669-bfbf-4846-a81b-183fab069c46",
+      "kind": "replan",
+      "payload": "{\"attempt\": 2, \"reason\": \"다음 허용 구간 탐색\", \"run_id\": \"d5a3761e-ecba-4a8f-a915-a37ca2ec7f5b\"}",
+      "created": "2026-11-20 06:06:53"
+    },
+    {
+      "id": 45,
+      "sid": "a155d669-bfbf-4846-a81b-183fab069c46",
+      "kind": "replan",
+      "payload": "{\"attempt\": 3, \"reason\": \"다음 허용 구간 탐색\", \"run_id\": \"d5a3761e-ecba-4a8f-a915-a37ca2ec7f5b\"}",
+      "created": "2026-11-20 06:06:53"
+    },
+    {
+      "id": 46,
+      "sid": "a155d669-bfbf-4846-a81b-183fab069c46",
+      "kind": "stage_end",
+      "payload": "{\"stage\": \"decide\", \"run_id\": \"d5a3761e-ecba-4a8f-a915-a37ca2ec7f5b\"}",
+      "created": "2026-11-20 06:06:53"
+    }
+  ]
+}

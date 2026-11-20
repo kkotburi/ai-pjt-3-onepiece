@@ -1,0 +1,217 @@
+{
+  "characters": {
+    "description": "이름 문자열로 후보 검색 또는 id 객체로 캐릭터 상세 조회",
+    "output": "[{id, name, korean_name?, first_appearance?, from_catalog?}]",
+    "errors": [
+      "INVALID_INPUT",
+      "UPSTREAM_ERROR",
+      "RATE_LIMIT",
+      "INVALID_RESPONSE",
+      "NO_RESULTS",
+      "ENGLISH_NAME_REQUIRED",
+      "NAME_REQUIRED"
+    ],
+    "type": "external_api",
+    "input": {
+      "$defs": {
+        "CharacterID": {
+          "additionalProperties": false,
+          "properties": {
+            "id": {
+              "format": "uuid",
+              "title": "Id",
+              "type": "string"
+            }
+          },
+          "required": [
+            "id"
+          ],
+          "title": "CharacterID",
+          "type": "object"
+        }
+      },
+      "anyOf": [
+        {
+          "minLength": 1,
+          "type": "string"
+        },
+        {
+          "$ref": "#/$defs/CharacterID"
+        }
+      ]
+    }
+  },
+  "debut": {
+    "description": "선택한 캐릭터의 애니 첫 등장 조회",
+    "output": "{episode, titles, airdate, character_source, source}",
+    "errors": [
+      "INVALID_INPUT",
+      "UPSTREAM_ERROR",
+      "RATE_LIMIT",
+      "INVALID_RESPONSE",
+      "NO_RESULTS",
+      "WIKI_PAGE_MISSING",
+      "NO_ANIME_DEBUT"
+    ],
+    "type": "external_api",
+    "input": {
+      "$defs": {
+        "CharacterCandidate": {
+          "properties": {
+            "id": {
+              "title": "Id",
+              "type": "string"
+            },
+            "name": {
+              "minLength": 1,
+              "title": "Name",
+              "type": "string"
+            },
+            "korean_name": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Korean Name"
+            },
+            "first_appearance": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "First Appearance"
+            },
+            "from_catalog": {
+              "default": false,
+              "title": "From Catalog",
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "id",
+            "name"
+          ],
+          "title": "CharacterCandidate",
+          "type": "object"
+        }
+      },
+      "anyOf": [
+        {
+          "minLength": 1,
+          "type": "string"
+        },
+        {
+          "$ref": "#/$defs/CharacterCandidate"
+        }
+      ]
+    }
+  },
+  "runtime": {
+    "description": "회차 제목과 일본 방영일로 TVmaze 러닝타임 확인",
+    "output": "{minutes, id, title, source}",
+    "errors": [
+      "INVALID_INPUT",
+      "UPSTREAM_ERROR",
+      "RATE_LIMIT",
+      "INVALID_RESPONSE",
+      "NO_RESULTS",
+      "NO_EPISODE",
+      "AMBIGUOUS_EPISODE",
+      "EPISODE_SEQUENCE_GAP",
+      "EPISODE_CONFLICT",
+      "NO_RUNTIME"
+    ],
+    "type": "external_api",
+    "input": {
+      "$defs": {
+        "EpisodeLookup": {
+          "properties": {
+            "episode": {
+              "anyOf": [
+                {
+                  "exclusiveMinimum": 0,
+                  "type": "integer"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Episode"
+            },
+            "titles": {
+              "items": {
+                "type": "string"
+              },
+              "title": "Titles",
+              "type": "array"
+            },
+            "airdate": {
+              "anyOf": [
+                {
+                  "format": "date",
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Airdate"
+            },
+            "character_source": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Character Source"
+            },
+            "source": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Source"
+            }
+          },
+          "required": [
+            "titles"
+          ],
+          "title": "EpisodeLookup",
+          "type": "object"
+        }
+      },
+      "anyOf": [
+        {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        {
+          "$ref": "#/$defs/EpisodeLookup"
+        }
+      ]
+    }
+  }
+}

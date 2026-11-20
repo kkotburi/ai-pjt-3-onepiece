@@ -1,0 +1,95 @@
+{
+  "request": "안녕하세요",
+  "response": "안녕하세요! 캐릭터 조회나 시청 계획을 도와드릴게요.",
+  "slot": null,
+  "elapsed_ms": 0.73,
+  "trace": [
+    {
+      "kind": "stage_start",
+      "stage": "analyze",
+      "run_id": "2c5f5933-968d-4dc8-a62c-50e9bfd31d9e"
+    },
+    {
+      "kind": "decision",
+      "intent": "clarify",
+      "reason": "안녕하세요! 캐릭터 조회나 시청 계획을 도와드릴게요.",
+      "run_id": "2c5f5933-968d-4dc8-a62c-50e9bfd31d9e"
+    },
+    {
+      "kind": "stage_end",
+      "stage": "analyze",
+      "run_id": "2c5f5933-968d-4dc8-a62c-50e9bfd31d9e"
+    },
+    {
+      "kind": "stage_start",
+      "stage": "lookup",
+      "run_id": "2c5f5933-968d-4dc8-a62c-50e9bfd31d9e"
+    },
+    {
+      "kind": "stage_end",
+      "stage": "lookup",
+      "run_id": "2c5f5933-968d-4dc8-a62c-50e9bfd31d9e"
+    },
+    {
+      "kind": "stage_start",
+      "stage": "decide",
+      "run_id": "2c5f5933-968d-4dc8-a62c-50e9bfd31d9e"
+    },
+    {
+      "kind": "stage_end",
+      "stage": "decide",
+      "run_id": "2c5f5933-968d-4dc8-a62c-50e9bfd31d9e"
+    }
+  ],
+  "saved_events": [
+    {
+      "id": 61,
+      "sid": "a155d669-bfbf-4846-a81b-183fab069c46",
+      "kind": "stage_start",
+      "payload": "{\"stage\": \"analyze\", \"run_id\": \"2c5f5933-968d-4dc8-a62c-50e9bfd31d9e\"}",
+      "created": "2026-11-20 06:06:53"
+    },
+    {
+      "id": 62,
+      "sid": "a155d669-bfbf-4846-a81b-183fab069c46",
+      "kind": "decision",
+      "payload": "{\"intent\": \"clarify\", \"reason\": \"안녕하세요! 캐릭터 조회나 시청 계획을 도와드릴게요.\", \"run_id\": \"2c5f5933-968d-4dc8-a62c-50e9bfd31d9e\"}",
+      "created": "2026-11-20 06:06:53"
+    },
+    {
+      "id": 63,
+      "sid": "a155d669-bfbf-4846-a81b-183fab069c46",
+      "kind": "stage_end",
+      "payload": "{\"stage\": \"analyze\", \"run_id\": \"2c5f5933-968d-4dc8-a62c-50e9bfd31d9e\"}",
+      "created": "2026-11-20 06:06:53"
+    },
+    {
+      "id": 64,
+      "sid": "a155d669-bfbf-4846-a81b-183fab069c46",
+      "kind": "stage_start",
+      "payload": "{\"stage\": \"lookup\", \"run_id\": \"2c5f5933-968d-4dc8-a62c-50e9bfd31d9e\"}",
+      "created": "2026-11-20 06:06:53"
+    },
+    {
+      "id": 65,
+      "sid": "a155d669-bfbf-4846-a81b-183fab069c46",
+      "kind": "stage_end",
+      "payload": "{\"stage\": \"lookup\", \"run_id\": \"2c5f5933-968d-4dc8-a62c-50e9bfd31d9e\"}",
+      "created": "2026-11-20 06:06:53"
+    },
+    {
+      "id": 66,
+      "sid": "a155d669-bfbf-4846-a81b-183fab069c46",
+      "kind": "stage_start",
+      "payload": "{\"stage\": \"decide\", \"run_id\": \"2c5f5933-968d-4dc8-a62c-50e9bfd31d9e\"}",
+      "created": "2026-11-20 06:06:53"
+    },
+    {
+      "id": 67,
+      "sid": "a155d669-bfbf-4846-a81b-183fab069c46",
+      "kind": "stage_end",
+      "payload": "{\"stage\": \"decide\", \"run_id\": \"2c5f5933-968d-4dc8-a62c-50e9bfd31d9e\"}",
+      "created": "2026-11-20 06:06:53"
+    }
+  ]
+}

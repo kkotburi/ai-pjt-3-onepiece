@@ -1,0 +1,8 @@
+<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>One Piece Watch Planner</title>
+<style>body{max-width:48rem;margin:3rem auto;padding:0 1rem;font:1rem/1.65 system-ui;color:#233548}textarea{width:100%;box-sizing:border-box;padding:.75rem}button{padding:.4rem .8rem;margin:.25rem;cursor:pointer}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#f1f5f6;padding:1rem}section{border-top:1px solid #ccd8dc;margin-top:2rem}a{color:#125677}</style>
+<h1>원피스 시청 계획 도우미</h1><form id="search"><label for="name">캐릭터 이름</label> <input id="name" list="character-names" required maxlength="150" placeholder="이무, 흰수염, 나미"><datalist id="character-names"></datalist><button>캐릭터 검색</button></form><p id="matches" aria-live="polite"></p><form id="chat"><label for="message">시청 요청</label><textarea id="message" required placeholder="로빈이 처음 등장하는 회차와 시청 시간을 알려줘"></textarea><button>질문하기</button></form>
+<p id="answer" aria-live="polite"></p><div id="sources"></div><button id="confirm" hidden>제안된 계획 저장</button>
+<details open><summary>실행 과정</summary><pre id="trace"></pre></details>
+<section><h2>내 시청 계획</h2><div id="plans"></div><p id="detail"></p></section>
+<section><h2>실행 기록</h2><button id="logs">현재 세션 기록 조회</button><button id="clear">기록 삭제</button><pre id="history"></pre></section>
+<script src="/app.js"></script></html>
